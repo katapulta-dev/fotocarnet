@@ -1,199 +1,316 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Foto carnet online 24 h | DNI y Pasaporte</title>
-  <meta name="description" content="Sube tu foto, archivo conforme 32×26 mm, fondo blanco y rostro frontal. Digital al instante; impresas 24–48 h.">
-  <!-- Tailwind por CDN (sin build) -->
+
+  <!-- ===== SEO básico y coherente ===== -->
+  <title>Foto carnet online 24 h para DNI y Pasaporte en España | Katapulta Digital</title>
+  <meta name="description" content="Haz tu foto de carnet válida para DNI y Pasaporte desde casa. Formato 32×26 mm, fondo blanco y encuadre frontal. Archivo digital al instante y opción de copias impresas 24–48 h en España." />
+  <meta name="keywords" content="foto carnet online, foto DNI 32x26, foto pasaporte España, foto carnet desde casa, copias impresas 24-48 h" />
+  <link rel="canonical" href="https://foto.katapultadigital.com/" />
+
+  <!-- Hreflang (target España). Si más adelante tienes otras versiones, añade más rel=alternate -->
+  <link rel="alternate" href="https://foto.katapultadigital.com/" hreflang="es-ES" />
+  <link rel="alternate" href="https://foto.katapultadigital.com/" hreflang="x-default" />
+
+  <!-- Open Graph / Twitter (previsualización al compartir) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Katapulta Digital" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:title" content="Foto carnet online 24 h para DNI y Pasaporte" />
+  <meta property="og:description" content="Sube tu foto desde el móvil. Formato 32×26 mm, fondo blanco, archivo conforme al instante y opción de impresas 24–48 h." />
+  <meta property="og:url" content="https://foto.katapultadigital.com/" />
+  <meta property="og:image" content="https://foto.katapultadigital.com/og-foto-carnet.jpg" />
+  <meta property="og:image:alt" content="Ejemplo de foto de carnet con fondo blanco y medidas 32×26 mm" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Foto carnet online 24 h para DNI y Pasaporte" />
+  <meta name="twitter:description" content="Archivo digital inmediato y opción de copias impresas 24–48 h en España." />
+  <meta name="twitter:image" content="https://foto.katapultadigital.com/og-foto-carnet.jpg" />
+  <meta name="twitter:site" content="@katapultadigital" />
+
+  <!-- Robots + Referer + Seguridad mínima -->
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' data:;
+    script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.tailwindcss.com 'unsafe-inline';
+    style-src 'self' 'unsafe-inline';
+    connect-src 'self' https://www.google-analytics.com;
+    frame-ancestors 'none';
+  ">
+
+  <!-- Favicon básico (ajusta rutas si subes iconos) -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Tailwind por CDN para no usar build -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Iconos -->
-  <script type="module">
-    import { CheckCircle2, Upload, Shield, Zap, Image as ImageIcon, Camera, Phone, Link as LinkIcon } from "https://cdn.jsdelivr.net/npm/lucide@0.469.0/+esm";
-    window.icons = { CheckCircle2, Upload, Shield, Zap, ImageIcon, Camera, Phone, LinkIcon };
+
+  <!-- GA4 OPCIONAL: sustituye G-XXXX si quieres medir en Google Analytics; si no, borra este bloque -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config','G-XXXXXXX'); // ← pega aquí tu Measurement ID
+    function track(name, params){ if(window.gtag){ gtag('event', name, params || {}); } }
   </script>
-  <!-- Plausible (opcional). Cambia el dominio por el tuyo o elimina estas dos líneas -->
-  <script defer data-domain="katapultadigital.com" src="https://plausible.io/js/script.js"></script>
+
+  <!-- ===== JSON-LD: WebSite + Organization + Service (área España) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://foto.katapultadigital.com/#website",
+        "url":"https://foto.katapultadigital.com/",
+        "name":"Katapulta Digital – Foto carnet online",
+        "inLanguage":"es-ES",
+        "potentialAction": {
+          "@type":"SearchAction",
+          "target":"https://www.google.com/search?q=site:fotok.katapultadigital.com+{search_term_string}",
+          "query-input":"required name=search_term_string"
+        }
+      },
+      {
+        "@type":"Organization",
+        "@id":"https://katapultadigital.com/#org",
+        "name":"Katapulta Digital",
+        "url":"https://katapultadigital.com/",
+        "logo":"https://katapultadigital.com/logo.png",
+        "email":"soporte@katapultadigital.com",
+        "telephone":"+34 600 000 000",
+        "areaServed":"ES",
+        "sameAs":[ "https://x.com/katapultadigital" ]
+      },
+      {
+        "@type":"Service",
+        "@id":"https://foto.katapultadigital.com/#service",
+        "serviceType":"Foto carnet online valida para DNI y Pasaporte",
+        "provider":{"@id":"https://katapultadigital.com/#org"},
+        "areaServed":"ES",
+        "availableChannel":{
+          "@type":"ServiceChannel",
+          "serviceUrl":"https://foto.katapultadigital.com/",
+          "availableLanguage":"es-ES"
+        },
+        "offers":{
+          "@type":"Offer",
+          "url":"https://foto.katapultadigital.com/#precios",
+          "priceCurrency":"EUR",
+          "price":"3.95",
+          "category":"OnlineOnly"
+        }
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://foto.katapultadigital.com/#faq",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"¿Sirve para DNI y Pasaporte en España?",
+            "acceptedAnswer":{"@type":"Answer","text":"Sí. Entregamos archivo conforme al formato 32×26 mm, fondo blanco y encuadre frontal exigido por la Administración española."}
+          },
+          {
+            "@type":"Question",
+            "name":"¿Qué pasa si la comisaría rechaza la foto?",
+            "acceptedAnswer":{"@type":"Answer","text":"Incluimos garantía de aceptación por criterios técnicos. Si la rechazan por tamaño, fondo o encuadre, la reprocesamos o devolvemos el importe."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body class="min-h-screen bg-white text-slate-900">
-  <!-- NAV -->
-  <header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b">
+  <!-- Encabezado -->
+  <header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b" role="banner">
     <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <div class="h-8 w-8 rounded-xl bg-slate-900 text-white grid place-content-center">ID</div>
+      <a href="#inicio" class="flex items-center gap-2" aria-label="Inicio Foto Carnet 24 h">
+        <div class="h-8 w-8 rounded-xl bg-slate-900 text-white grid place-content-center" aria-hidden="true">ID</div>
         <span class="font-semibold tracking-tight">Foto Carnet 24 h</span>
-      </div>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Principal">
         <a href="#como-funciona" class="hover:opacity-80">Cómo funciona</a>
         <a href="#precios" class="hover:opacity-80">Precios</a>
         <a href="#faq" class="hover:opacity-80">FAQ</a>
-        <a href="#oficial" class="hover:opacity-80 flex items-center gap-1">Requisitos oficiales</a>
+        <a href="#oficial" class="hover:opacity-80">Requisitos oficiales</a>
       </nav>
-      <a href="#comprar" id="cta-header" class="inline-flex items-center gap-2 rounded-2xl bg-slate-900 text-white px-4 py-2 text-sm font-medium shadow hover:shadow-md">
-        Comprar ahora
+      <a href="#comprar" id="cta-header" class="inline-flex items-center gap-2 rounded-2xl bg-slate-900 text-white px-4 py-2 text-sm font-medium shadow hover:shadow-md" aria-label="Abrir formulario de interés">
+        Quiero comprar
       </a>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="border-b bg-gradient-to-b from-slate-50 to-white">
-    <div class="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-          Foto de carnet válida para <span class="underline decoration-2 decoration-slate-900">DNI y Pasaporte</span>, hecha desde tu casa en <span class="whitespace-nowrap">24 h</span>
-        </h1>
-        <p class="mt-4 text-slate-700 text-lg">
-          Sube una foto con tu móvil. Ajustamos <strong>32×26 mm</strong>, <strong>fondo blanco</strong> y encuadre frontal.
-          Descarga del archivo conforme y, si quieres, copias impresas a domicilio.
-        </p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#comprar" id="cta-hero" class="inline-flex items-center gap-2 rounded-2xl bg-slate-900 text-white px-5 py-3 font-semibold shadow hover:shadow-md">Empezar ahora</a>
-          <a href="#como-funciona" class="inline-flex items-center gap-2 rounded-2xl border px-5 py-3 font-semibold hover:bg-slate-50">Ver cómo funciona</a>
-        </div>
-        <div class="mt-6 flex flex-wrap items-center gap-4 text-sm text-slate-600">
-          <span class="inline-flex items-center gap-2">Garantía de aceptación*</span>
-          <span class="inline-flex items-center gap-2">Soporte por WhatsApp</span>
-          <span class="inline-flex items-center gap-2">Apto para niños y adultos</span>
-        </div>
-      </div>
-      <div class="md:pl-8">
-        <div class="rounded-3xl border shadow-sm p-6 bg-white">
-          <div class="aspect-[3/4] rounded-2xl bg-slate-100 grid place-content-center">
-            <svg width="48" height="48" viewBox="0 0 24 24" class="opacity-40"><path fill="currentColor" d="M21 19V5H3v14zm2-16v18H1V3zM8 9.5A1.5 1.5 0 1 1 9.5 11A1.5 1.5 0 0 1 8 9.5M6 17h12l-3.75-5l-3 4L9 13z"/></svg>
+  <!-- Hero -->
+  <main id="inicio">
+    <section class="border-b bg-gradient-to-b from-slate-50 to-white">
+      <div class="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+            Foto de carnet válida para <span class="underline decoration-2 decoration-slate-900">DNI y Pasaporte</span>, desde casa en <span class="whitespace-nowrap">24 h</span>
+          </h1>
+          <p class="mt-4 text-slate-700 text-lg">
+            Sube tu foto con el móvil. Ajustamos <strong>32×26 mm</strong>, <strong>fondo blanco</strong> y encuadre frontal.
+            Archivo digital inmediato y opción de copias impresas 24–48 h (España).
+          </p>
+          <ul class="mt-4 text-slate-700 list-disc pl-5">
+            <li>Garantía de aceptación por criterios técnicos</li>
+            <li>Soporte por WhatsApp y email</li>
+            <li>Apto para bebés, niños y adultos</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#comprar" id="cta-hero" class="inline-flex items-center gap-2 rounded-2xl bg-slate-900 text-white px-5 py-3 font-semibold shadow hover:shadow-md" aria-label="Abrir formulario para avisarme">Empezar ahora</a>
+            <a href="#como-funciona" class="inline-flex items-center gap-2 rounded-2xl border px-5 py-3 font-semibold hover:bg-slate-50">Ver cómo funciona</a>
           </div>
-          <p class="mt-4 text-sm text-slate-500">Vista previa ilustrativa. Tu foto se recorta al formato oficial 32×26 mm.</p>
-          <form class="mt-4 grid gap-3" id="form-inline">
-            <label class="text-sm font-medium">Recibe el enlace de subida en tu email</label>
-            <input id="email-inline" type="email" placeholder="tucorreo@ejemplo.com" required class="rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-900/20"/>
-            <button class="rounded-2xl bg-slate-900 text-white px-4 py-3 font-semibold" type="submit">Enviar enlace</button>
-            <p class="text-xs text-slate-500">No hacemos spam. Puedes subir la foto desde cualquier dispositivo.</p>
-          </form>
+        </div>
+
+        <div class="md:pl-8">
+          <figure class="rounded-3xl border shadow-sm p-6 bg-white">
+            <div class="aspect-[3/4] rounded-2xl bg-slate-100 grid place-content-center">
+              <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='300'%3E%3Crect width='100%25' height='100%25' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' font-size='16' fill='%239ca3af' text-anchor='middle'%3EPrevisualización 3:4%3C/text%3E%3C/svg%3E" alt="Previsualización de foto de carnet en proporción 3:4 fondo claro" class="rounded-xl" />
+            </div>
+            <figcaption class="mt-4 text-sm text-slate-500">
+              Previsualización. La foto final se entrega en formato oficial 32×26 mm (300 dpi).
+            </figcaption>
+            <form class="mt-4 grid gap-3" id="form-inline" aria-label="Formulario para recibir enlace de subida">
+              <label for="email-inline" class="text-sm font-medium">Recibe el enlace de subida en tu email</label>
+              <input id="email-inline" name="email" type="email" placeholder="tucorreo@ejemplo.com" required class="rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-900/20" />
+              <button class="rounded-2xl bg-slate-900 text-white px-4 py-3 font-semibold" type="submit">Enviar enlace</button>
+              <p class="text-xs text-slate-500">Sin spam. Puedes subir la foto desde cualquier dispositivo.</p>
+            </form>
+          </figure>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CÓMO FUNCIONA -->
-  <section id="como-funciona" class="border-b">
-    <div class="mx-auto max-w-6xl px-4 py-16">
-      <h2 class="text-3xl font-bold tracking-tight">Cómo funciona</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="rounded-3xl border p-6">
-          <h3 class="mt-1 font-semibold">1) Sube tu foto</h3>
-          <p class="mt-2 text-slate-600 text-sm">Haz una foto con buena luz y fondo claro. Súbela en JPG/HEIC.</p>
+    <!-- Cómo funciona -->
+    <section id="como-funciona" class="border-b">
+      <div class="mx-auto max-w-6xl px-4 py-16">
+        <h2 class="text-3xl font-bold tracking-tight">Cómo funciona</h2>
+        <div class="mt-8 grid md:grid-cols-3 gap-6">
+          <article class="rounded-3xl border p-6">
+            <h3 class="mt-1 font-semibold">1) Sube tu foto</h3>
+            <p class="mt-2 text-slate-600 text-sm">Buena luz y fondo claro. Formatos admitidos: JPG/HEIC/PNG.</p>
+          </article>
+          <article class="rounded-3xl border p-6">
+            <h3 class="mt-1 font-semibold">2) Validación automática</h3>
+            <p class="mt-2 text-slate-600 text-sm">Comprobamos rostro frontal, encuadre y fondo blanco liso.</p>
+          </article>
+          <article class="rounded-3xl border p-6">
+            <h3 class="mt-1 font-semibold">3) Archivo conforme + impresas</h3>
+            <p class="mt-2 text-slate-600 text-sm">Archivo 300 dpi al instante. Opcional: 8 copias impresas 24–48 h.</p>
+          </article>
         </div>
-        <div class="rounded-3xl border p-6">
-          <h3 class="mt-1 font-semibold">2) Validación automática</h3>
-          <p class="mt-2 text-slate-600 text-sm">Detectamos rostro, postura frontal y fondo blanco.</p>
-        </div>
-        <div class="rounded-3xl border p-6">
-          <h3 class="mt-1 font-semibold">3) Archivo conforme + impresas</h3>
-          <p class="mt-2 text-slate-600 text-sm">Descarga al instante (300 dpi). Opcional: 8 copias impresas 24–48 h.</p>
+        <p class="mt-6 text-xs text-slate-500">*Garantía sujeta a condiciones: rechazo por tamaño/fondo/encuadre.</p>
+      </div>
+    </section>
+
+    <!-- Precios -->
+    <section id="precios" class="border-b">
+      <div class="mx-auto max-w-6xl px-4 py-16">
+        <h2 class="text-3xl font-bold tracking-tight">Precios</h2>
+        <div class="mt-8 grid md:grid-cols-3 gap-6">
+          <div class="rounded-3xl border p-6 flex flex-col">
+            <h3 class="font-semibold text-lg">Digital Express</h3>
+            <div class="mt-2 text-3xl font-bold">3,95€</div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-700">
+              <li>Archivo 32×26 mm (300 dpi)</li><li>Fondo blanco automático</li><li>Descarga inmediata</li><li>Guía de impresión</li>
+            </ul>
+            <button data-plan="Digital Express" class="btn-plan mt-6 inline-flex items-center justify-center rounded-2xl bg-slate-900 text-white px-4 py-3 font-semibold hover:shadow-md" aria-label="Quiero Digital Express">Quiero este plan</button>
+          </div>
+          <div class="rounded-3xl border p-6 flex flex-col">
+            <h3 class="font-semibold text-lg">Digital + 8 impresas</h3>
+            <div class="mt-2 text-3xl font-bold">8,95€</div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-700">
+              <li>Incluye lo anterior</li><li>Hoja 10×15 cm (8 copias)</li><li>Laboratorio fotográfico</li><li>Envío 24–48 h</li>
+            </ul>
+            <button data-plan="Digital + impresas" class="btn-plan mt-6 inline-flex items-center justify-center rounded-2xl bg-slate-900 text-white px-4 py-3 font-semibold hover:shadow-md" aria-label="Quiero Digital + impresas">Quiero este plan</button>
+          </div>
+          <div class="rounded-3xl border p-6 flex flex-col">
+            <h3 class="font-semibold text-lg">Pack Pro (10 usos)</h3>
+            <div class="mt-2 text-3xl font-bold">24,90€</div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-700">
+              <li>10 fotos digitales</li><li>Validez 12 meses</li><li>Soporte prioritario</li><li>Factura para empresas</li>
+            </ul>
+            <button data-plan="Pack Pro" class="btn-plan mt-6 inline-flex items-center justify-center rounded-2xl bg-slate-900 text-white px-4 py-3 font-semibold hover:shadow-md" aria-label="Quiero Pack Pro">Quiero este plan</button>
+          </div>
         </div>
       </div>
-      <p class="mt-6 text-xs text-slate-500">*Garantía de aceptación por criterios técnicos (tamaño/fondo/encuadre).</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- PRECIOS -->
-  <section id="precios" class="border-b">
-    <div class="mx-auto max-w-6xl px-4 py-16">
-      <h2 class="text-3xl font-bold tracking-tight">Precios</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="rounded-3xl border p-6 flex flex-col">
-          <h3 class="font-semibold text-lg">Digital Express</h3>
-          <div class="mt-2 text-3xl font-bold">3,95€</div>
-          <ul class="mt-4 space-y-2 text-sm text-slate-700">
-            <li>Archivo 32×26 mm (300 dpi)</li><li>Fondo blanco automático</li><li>Descarga inmediata</li><li>Guía de impresión</li>
-          </ul>
-          <button data-plan="Digital Express" class="btn-plan mt-6 inline-flex items-center justify-center rounded-2xl bg-slate-900 text-white px-4 py-3 font-semibold hover:shadow-md">Quiero este plan</button>
-        </div>
-        <div class="rounded-3xl border p-6 flex flex-col">
-          <h3 class="font-semibold text-lg">Digital + 8 impresas</h3>
-          <div class="mt-2 text-3xl font-bold">8,95€</div>
-          <ul class="mt-4 space-y-2 text-sm text-slate-700">
-            <li>Incluye lo anterior</li><li>Hoja 10×15 cm (8 copias)</li><li>Laboratorio fotográfico</li><li>Envío 24–48 h</li>
-          </ul>
-          <button data-plan="Digital + impresas" class="btn-plan mt-6 inline-flex items-center justify-center rounded-2xl bg-slate-900 text-white px-4 py-3 font-semibold hover:shadow-md">Quiero este plan</button>
-        </div>
-        <div class="rounded-3xl border p-6 flex flex-col">
-          <h3 class="font-semibold text-lg">Pack Pro (10 usos)</h3>
-          <div class="mt-2 text-3xl font-bold">24,90€</div>
-          <ul class="mt-4 space-y-2 text-sm text-slate-700">
-            <li>10 fotos digitales</li><li>Validez 12 meses</li><li>Soporte prioritario</li><li>Factura para empresas</li>
-          </ul>
-          <button data-plan="Pack Pro" class="btn-plan mt-6 inline-flex items-center justify-center rounded-2xl bg-slate-900 text-white px-4 py-3 font-semibold hover:shadow-md">Quiero este plan</button>
+    <!-- FAQ -->
+    <section id="faq" class="border-b">
+      <div class="mx-auto max-w-6xl px-4 py-16">
+        <h2 class="text-3xl font-bold tracking-tight">Preguntas frecuentes</h2>
+        <div class="mt-8 grid md:grid-cols-2 gap-6 text-slate-800">
+          <div class="rounded-3xl border p-6">
+            <h3 class="font-semibold">¿Sirve para DNI y Pasaporte?</h3>
+            <p class="mt-2 text-sm">Sí, generamos archivo conforme: 32×26 mm, fondo blanco liso y foto reciente de frente.</p>
+          </div>
+          <div class="rounded-3xl border p-6">
+            <h3 class="font-semibold">¿Y si la comisaría la rechaza?</h3>
+            <p class="mt-2 text-sm">Reprocesado o reembolso si el motivo es técnico (tamaño/fondo/encuadre).</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ (recortado) -->
-  <section id="faq" class="border-b">
-    <div class="mx-auto max-w-6xl px-4 py-16">
-      <h2 class="text-3xl font-bold tracking-tight">FAQ</h2>
-      <div class="mt-8 grid md:grid-cols-2 gap-6 text-slate-800">
-        <div class="rounded-3xl border p-6">
-          <h3 class="font-semibold">¿Sirve para DNI y Pasaporte?</h3>
-          <p class="mt-2 text-sm">Sí, generamos archivo conforme al formato requerido: 32×26 mm, fondo blanco y foto reciente de frente.</p>
-        </div>
-        <div class="rounded-3xl border p-6">
-          <h3 class="font-semibold">¿Y si la comisaría la rechaza?</h3>
-          <p class="mt-2 text-sm">Reprocesado o reembolso si el motivo es técnico (tamaño/fondo/encuadre).</p>
-        </div>
+    <!-- Enlaces oficiales (autoridad y E-E-A-T) -->
+    <section id="oficial">
+      <div class="mx-auto max-w-6xl px-4 py-16">
+        <h2 class="text-3xl font-bold tracking-tight">Requisitos oficiales</h2>
+        <ul class="mt-4 space-y-2 list-disc pl-5 text-slate-800">
+          <li><a class="underline" href="https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/dni/documentacion-necesaria-para-su-tramitacion/" target="_blank" rel="noreferrer noopener">Ministerio del Interior · DNI</a></li>
+          <li><a class="underline" href="https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/pasaporte/procedimiento-de-expedicion/" target="_blank" rel="noreferrer noopener">Ministerio del Interior · Pasaporte</a></li>
+        </ul>
+        <p class="mt-6 text-xs text-slate-500">*Garantía de aceptación por criterios técnicos: tamaño, fondo, encuadre. Ver condiciones.</p>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ENLACES OFICIALES -->
-  <section id="oficial">
-    <div class="mx-auto max-w-6xl px-4 py-16">
-      <h2 class="text-3xl font-bold tracking-tight">Requisitos oficiales</h2>
-      <ul class="mt-4 space-y-2 list-disc pl-5 text-slate-800">
-        <li><a class="underline" href="https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/dni/documentacion-necesaria-para-su-tramitacion/" target="_blank" rel="noreferrer">Ministerio del Interior · DNI</a></li>
-        <li><a class="underline" href="https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/pasaporte/procedimiento-de-expedicion/" target="_blank" rel="noreferrer">Ministerio del Interior · Pasaporte</a></li>
-      </ul>
-      <p class="mt-6 text-xs text-slate-500">*Garantía de aceptación: ver condiciones.</p>
-    </div>
-  </section>
-
-  <!-- MODAL -->
-  <div id="modal" class="hidden fixed inset-0 bg-black/40 z-50 grid place-items-center">
+  <!-- Modal Lead -->
+  <div id="modal" class="hidden fixed inset-0 bg-black/40 z-50 grid place-items-center" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="bg-white rounded-2xl p-6 w-full max-w-md">
-      <h3 class="text-lg font-semibold">Avísame cuando esté disponible</h3>
-      <p class="text-sm text-slate-600 mt-1">Déjanos tu email y te escribimos cuando activemos compras.</p>
-      <form id="lead-form" class="mt-4 grid gap-3">
-        <input id="lead-email" type="email" required placeholder="tucorreo@ejemplo.com" class="rounded-xl border px-4 py-3"/>
+      <h3 id="modal-title" class="text-lg font-semibold">Avísame cuando esté disponible</h3>
+      <p class="text-sm text-slate-600 mt-1">Déjanos tu email y te avisamos al activar compras.</p>
+      <form id="lead-form" class="mt-4 grid gap-3" aria-label="Formulario de interés">
+        <label for="lead-email" class="sr-only">Email</label>
+        <input id="lead-email" name="email" type="email" required placeholder="tucorreo@ejemplo.com" class="rounded-xl border px-4 py-3" autocomplete="email" />
         <div class="flex gap-3">
           <button class="rounded-2xl bg-slate-900 text-white px-4 py-3 font-semibold" type="submit">Quiero que me aviséis</button>
           <button type="button" id="close-modal" class="rounded-2xl border px-4 py-3">Cerrar</button>
         </div>
       </form>
-      <p id="lead-ok" class="hidden text-sm text-green-600 mt-3">¡Gracias! Te avisaremos.</p>
-      <p id="lead-err" class="hidden text-sm text-red-600 mt-3">Error al enviar. Prueba de nuevo.</p>
+      <p id="lead-ok" class="hidden text-sm text-green-600 mt-3" role="status">¡Gracias! Te avisaremos.</p>
+      <p id="lead-err" class="hidden text-sm text-red-600 mt-3" role="alert">Error al enviar. Prueba de nuevo.</p>
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer class="border-t bg-white">
+  <!-- Footer -->
+  <footer class="border-t bg-white" role="contentinfo">
     <div class="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-3 gap-6 text-sm text-slate-600">
       <div>
         <div class="font-semibold text-slate-900">Foto Carnet 24 h</div>
-        <p class="mt-2">Archivo conforme para DNI y Pasaporte. Digital al instante; impresas 24–48 h.</p>
+        <p class="mt-2">Archivo conforme para DNI y Pasaporte. Digital al instante; impresas 24–48 h en España.</p>
       </div>
       <div>
         <div class="font-semibold text-slate-900">Legal</div>
         <ul class="mt-2 space-y-1">
-          <li>Privacidad (RGPD)</li>
-          <li>Términos</li>
-          <li>Devoluciones</li>
+          <li><a href="/privacidad.html">Privacidad (RGPD)</a></li>
+          <li><a href="/terminos.html">Términos</a></li>
+          <li><a href="/devoluciones.html">Devoluciones</a></li>
         </ul>
       </div>
       <div>
         <div class="font-semibold text-slate-900">Contacto</div>
         <ul class="mt-2 space-y-1">
-          <li>WhatsApp: 600 000 000</li>
-          <li>Email: soporte@ejemplo.test</li>
+          <li>WhatsApp: <a href="https://wa.me/34600000000">+34 600 000 000</a></li>
+          <li>Email: <a href="mailto:soporte@katapultadigital.com">soporte@katapultadigital.com</a></li>
         </ul>
       </div>
     </div>
@@ -204,22 +321,23 @@
     // Abrir modal desde CTA header/hero
     document.getElementById('cta-header').addEventListener('click', (e)=>{ e.preventDefault(); openModal('Header'); });
     document.getElementById('cta-hero').addEventListener('click', (e)=>{ e.preventDefault(); openModal('Hero'); });
-    // Botones de planes
+
+    // Botones de planes (intención de compra)
     document.querySelectorAll('.btn-plan').forEach(btn=>{
       btn.addEventListener('click',(e)=>{
         e.preventDefault();
         const plan = btn.getAttribute('data-plan');
-        track('IntentoComprar', { plan });
+        track('intent_buy', { plan });
         openModal(plan);
       });
     });
-    // Form inline (hero)
+
+    // Form inline (hero) → Lead de interés (sin compra)
     document.getElementById('form-inline').addEventListener('submit', async (e)=>{
       e.preventDefault();
       const email = document.getElementById('email-inline').value.trim();
       if(!email) return;
-      track('LeadEmail', {});
-      // OPCIONAL: envía a Google Form (más abajo instrucciones)
+      track('lead_email', { origin: 'inline' });
       alert('¡Hecho! Te escribiremos cuando activemos compras.');
       e.target.reset();
     });
@@ -227,31 +345,27 @@
     // Modal
     const modal = document.getElementById('modal');
     document.getElementById('close-modal').addEventListener('click', ()=> modal.classList.add('hidden'));
-    function openModal(origin){
-      modal.classList.remove('hidden');
-      modal.dataset.origin = origin || '';
-    }
+    function openModal(origin){ modal.classList.remove('hidden'); modal.dataset.origin = origin || ''; }
 
-    // Envío lead modal
+    // Lead en modal
     document.getElementById('lead-form').addEventListener('submit', async (e)=>{
       e.preventDefault();
       const email = document.getElementById('lead-email').value.trim();
       const origin = modal.dataset.origin || 'modal';
       if(!email) return;
-      track('LeadEmail', { origin });
-      // === OPCIÓN 1 (súper fácil): Google Forms ===
-      // 1) Crea un Google Form con un único campo "email".
-      // 2) Clic en "Obtener vínculo" y copia la URL (formResponse) con el entry=<ID>.
-      // 3) Sustituye la URL de fetch de abajo por la de tu Form (method: POST, mode: no-cors).
+      track('lead_email', { origin });
 
-      const GOOGLE_FORM_ACTION = ""; // pega aquí tu URL formResponse (opcional)
-      const GOOGLE_FORM_EMAIL_ENTRY = ""; // pega aquí tu entry de email (opcional)
+      // === OPCIÓN SÚPER FÁCIL: Google Forms (sin backend) ===
+      // 1) Crea un Google Form con un campo "Email".
+      // 2) Copia la URL de envío (formResponse) y el entry del email y pégalos aquí:
+      const GOOGLE_FORM_ACTION = "";      // p. ej., https://docs.google.com/forms/d/e/XXXX/formResponse
+      const GOOGLE_FORM_EMAIL_ENTRY = ""; // p. ej., entry.1234567890
 
       try{
         if(GOOGLE_FORM_ACTION && GOOGLE_FORM_EMAIL_ENTRY){
-          const formData = new FormData();
-          formData.append(GOOGLE_FORM_EMAIL_ENTRY, email);
-          await fetch(GOOGLE_FORM_ACTION, { method: "POST", mode: "no-cors", body: formData });
+          const fd = new FormData();
+          fd.append(GOOGLE_FORM_EMAIL_ENTRY, email);
+          await fetch(GOOGLE_FORM_ACTION, { method:"POST", mode:"no-cors", body: fd });
         }
         document.getElementById('lead-ok').classList.remove('hidden');
         e.target.reset();
@@ -259,12 +373,6 @@
         document.getElementById('lead-err').classList.remove('hidden');
       }
     });
-
-    // Tracking genérico (Plausible opcional)
-    function track(name, props){
-      if(window.plausible){ window.plausible(name, { props }); }
-      // Si no usas Plausible, no pasa nada: no rompe nada.
-    }
   </script>
 </body>
 </html>
