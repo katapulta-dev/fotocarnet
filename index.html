@@ -322,6 +322,22 @@
     document.getElementById('cta-header').addEventListener('click', (e)=>{ e.preventDefault(); openModal('Header'); });
     document.getElementById('cta-hero').addEventListener('click', (e)=>{ e.preventDefault(); openModal('Hero'); });
 
+     // 1) CTA Header: "Comprar ahora"
+    const ctaHeader = document.getElementById('cta-header');
+    if (ctaHeader) {
+      ctaHeader.addEventListener('click', (e)=>{
+        // si abre modal, no impidas navegación si no hay href real
+        track('cta_click', { cta: 'comprar_header', placement: 'header' });
+      });
+    }
+  
+    // 2) CTA Hero: "Empezar ahora"
+    const ctaHero = document.getElementById('cta-hero');
+    if (ctaHero) {
+      ctaHero.addEventListener('click', (e)=>{
+        track('cta_click', { cta: 'empezar_ahora', placement: 'hero' });
+      });
+    }
     // Botones de planes (intención de compra)
     document.querySelectorAll('.btn-plan').forEach(btn=>{
       btn.addEventListener('click',(e)=>{
@@ -376,6 +392,7 @@
   </script>
 </body>
 </html>
+
 
 
 
